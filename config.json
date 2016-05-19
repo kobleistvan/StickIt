@@ -1,0 +1,13 @@
+{
+  "dev": {
+    "jwt": {
+      "superSecret": "allha1lnevel14ever!"
+    }
+  },
+
+  "staging": {
+  },
+
+  "production": {
+  }
+}
