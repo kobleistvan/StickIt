@@ -22,7 +22,6 @@ logger.remove(logger.transports.Console).add(logger.transports.Console, {
     colorize: true
 });
 
-
 logger.exitOnError = false;
 
 // Define a stream to be used by morgan
