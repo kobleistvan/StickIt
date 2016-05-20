@@ -1,3 +1,12 @@
+// Use strict for all the imported modules. Doesn't apply for this one, have to use classic "use strict".
+"use strict";
+require('use-strict');
+
+// Define rootRequire to avoid '../../../../'-es
+global.rootRequire = function(name) {
+    return require(__dirname + '/' + name);
+};
+
 var express = require('express'),
     path = require('path'),
     favicon = require('serve-favicon'),
@@ -9,12 +18,9 @@ var routes = require('./routes/index');
 
 var app = express();
 
-// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public/favicon', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
