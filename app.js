@@ -33,6 +33,9 @@ logger.stream = {
     }
 };
 
+// Moved static content serving before logging for simplicity
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Redirect morgan logs to winston's info stream
 app.use(require("morgan")((process.env.NODE_ENV ? 'combined' : 'dev'), {
     "stream": logger.stream
@@ -49,7 +52,6 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet());
 
 // Handle every route
