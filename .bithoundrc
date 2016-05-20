@@ -2,7 +2,8 @@
     "ignore": [],
     "dependencies": {
 	    "unused-ignores": [
-	      "debug"
+	      "debug",
+	      "hbs"
 	    ]
   }
 }
