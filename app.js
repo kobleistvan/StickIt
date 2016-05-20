@@ -24,6 +24,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     helmet = require('helmet'),
     routes = require('./routes/routes'),
+    compression = require('compression'),
     app = express();
 
 // Define a stream to be used by morgan
@@ -32,6 +33,9 @@ logger.stream = {
         logger.info(message);
     }
 };
+
+// use GZip compression
+app.use(compression());
 
 // Moved static content serving before logging for simplicity
 app.use(express.static(path.join(__dirname, 'public')));
