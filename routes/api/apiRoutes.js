@@ -1,8 +1,8 @@
 var express = require('express'),
-    router = express.Router();
-    // postit = require('./postit');
+    router = express.Router(),
+    stickyNote = require('./stickyNote');
 
 // Define routes to various API related handlers
-// router.use('/postit', postit);
+router.use('/stickyNote', stickyNote);
 
 module.exports = router;

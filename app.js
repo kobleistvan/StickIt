@@ -12,27 +12,13 @@ var express = require('express'),
     config = require('./config.json')[process.env.NODE_ENV || 'dev'],
     favicon = require('serve-favicon'),
     morgan = require('morgan'),
-    winston = require('winston'),
-    logger = new winston.Logger({
-        transports: [
-            new winston.transports.File(config.winston.transports.file),
-            new winston.transports.Console(config.winston.transports.console)
-        ],
-        exitOnError: false
-    }),
+    logger = require('./logs/logger'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     helmet = require('helmet'),
     routes = require('./routes/routes'),
     compression = require('compression'),
     app = express();
-
-// Define a stream to be used by morgan
-logger.stream = {
-    write: function(message, encoding) {
-        logger.info(message);
-    }
-};
 
 // use GZip compression
 app.use(compression());
