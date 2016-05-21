@@ -1,9 +1,9 @@
 var express = require('express'),
     router = express.Router(),
-    webRoutes = require('./web/webRoutes'),
+    index = require('./web/index'),
     apiRoutes = require('./api/apiRoutes');
 
-// Router middleware that encapsulates every routing for the available pages and API. NEVER INTERCHANGE THEM!
+// Router middleware that encapsulates every routing for the available pages and API. DON'T INTERCHANGE THEM!
 
 router.use('/api', apiRoutes);
 
@@ -15,6 +15,7 @@ router.use('/api', function(req, res) {
     });
 });
 
-router.use('/', webRoutes);
+// Serve the SPA
+router.use('/', index);
 
 module.exports = router;

@@ -1,11 +1,19 @@
 {
     "dev": {
         "jwt": {
-            "superSecret": "thisshouldbeasecret"
+            "superSecret": "thisshouldbearandomsecretstring!"
         }
     },
 
-    "staging": {},
+    "staging": {
+        "jwt": {
+            "superSecret": "thisshouldbearandomsecretstring!"
+        }
+    },
 
-    "production": {}
+    "production": {
+        "jwt": {
+            "superSecret": "thisshouldbeaverydifferentrandomsecretstring!"
+        }
+    }
 }
