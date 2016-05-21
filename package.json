@@ -17,6 +17,7 @@
     "morgan": "^1.7.0",
     "node-json-db": "^0.7.2",
     "serve-favicon": "~2.3.0",
+    "shortid": "^2.2.6",
     "use-strict": "^1.0.1",
     "winston": "^2.2.0"
   },
