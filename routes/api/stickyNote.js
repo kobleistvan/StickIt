@@ -29,7 +29,7 @@ router.get('/:id', function(req, res, next) {
 
     // Return stickynote
     stickyNotes.getStickyNote({
-        stickyNoteId: req.params('id')
+        stickyNoteId: req.params.id
     }, function(err, response) {
         if (err) {
             return res.json({
@@ -89,7 +89,7 @@ router.put('/:id', function(req, res, next) {
 
     // Edit stickynote
     stickyNotes.editStickyNote({
-        stickyNoteId: req.params('id'),
+        stickyNoteId: req.params.id,
         note: req.body.note
     }, function(err, response) {
         if (err) {
@@ -111,7 +111,7 @@ router.delete('/:id', function(req, res, next) {
 
     // Delete stickynote
     stickyNotes.removeStickyNote({
-        stickyNoteId: req.params('id')
+        stickyNoteId: req.params.id
     }, function(err, response) {
         if (err) {
             return res.json({
