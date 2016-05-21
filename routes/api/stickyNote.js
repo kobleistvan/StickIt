@@ -8,7 +8,9 @@ var express = require('express'),
 router.get('/', function(req, res, next) {
 
     // Return every stickynote
-    stickyNotes.getEveryStickyNote(null, function(err, response) {
+    stickyNotes.getEveryStickyNote({
+    	userId: "abcd12d4"
+    }, function(err, response) {
         if (err) {
             return res.json({
                 success: false,
@@ -29,12 +31,13 @@ router.get('/:id', function(req, res, next) {
 
     // Return stickynote
     stickyNotes.getStickyNote({
+    	userId: "abcd12d4",
         stickyNoteId: req.params.id
     }, function(err, response) {
         if (err) {
             return res.json({
                 success: false,
-                message: err
+                message: err.message
             })
         } else {
             return res.json({
@@ -59,6 +62,7 @@ router.post('/', function(req, res, next) {
 
     // Add new stickynote
     stickyNotes.addStickyNote({
+    	userId: "abcd12d4",
         note: req.body.note
     }, function(err, response) {
         if (err) {
@@ -89,6 +93,7 @@ router.put('/:id', function(req, res, next) {
 
     // Edit stickynote
     stickyNotes.editStickyNote({
+    	userId: "abcd12d4",
         stickyNoteId: req.params.id,
         note: req.body.note
     }, function(err, response) {
@@ -111,6 +116,7 @@ router.delete('/:id', function(req, res, next) {
 
     // Delete stickynote
     stickyNotes.removeStickyNote({
+    	userId: "abcd12d4",
         stickyNoteId: req.params.id
     }, function(err, response) {
         if (err) {

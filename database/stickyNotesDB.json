@@ -1,32 +1,8 @@
 {
-    "users": {
-        "abcd12d4": {
-            "notes": {
-                "rkWpVeRG": {
-                    "note": "Hello world",
-                    "dateTime": "2016-01-01 22:00:00"
-                },
-                "B1jpNeRz": {
-                    "note": "Hello world!!!",
-                    "dateTime": "2016-01-01 22:00:00"
-                },
-                "ry2p4xCz": {
-                    "note": "Hello world",
-                    "dateTime": "2016-01-01 22:00:00"
-                },
-                "rJhaEeAM": {
-                    "note": "Hello world",
-                    "dateTime": "2016-01-01 22:00:00"
-                },
-                "HJTa4gAf": {
-                    "note": "Hello world",
-                    "dateTime": "2016-01-01 22:00:00"
-                },
-                "rkB04eCM": {
-                    "note": "Hello world",
-                    "dateTime": "2016-01-01 22:00:00"
-                }
-            }
-        }
-    }
+	"users" :{
+		"abcd12d4": {
+			"notes": {
+			}
+		}
+	}
 }
