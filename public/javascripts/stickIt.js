@@ -1,24 +1,10 @@
-var stickItModule = angular.module('stickIt', ['ui.bootstrap']);
+var stickItModule = angular.module('stickIt', ['ui.bootstrap', 'angular-packery']);
 
-stickItModule.controller('ButtonsCtrl', function ($scope) {
-  $scope.singleModel = 1;
+stickItModule.controller('RegisterController', ['$scope', function($scope) {
 
-  $scope.radioModel = 'Middle';
+    $scope.register = function(user) {
+    	console.log(user);
+        $scope.master = angular.copy(user);
+    };
 
-  $scope.checkModel = {
-    left: false,
-    middle: true,
-    right: false
-  };
-
-  $scope.checkResults = [];
-
-  $scope.$watchCollection('checkModel', function () {
-    $scope.checkResults = [];
-    angular.forEach($scope.checkModel, function (value, key) {
-      if (value) {
-        $scope.checkResults.push(key);
-      }
-    });
-  });
-});
+}]);

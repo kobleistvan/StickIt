@@ -28,43 +28,80 @@
 
     </head>
     <body>
-	    <div> Navbar / header</div>
-	    <div> Content. I can add: {{ 1+2 }}. </div>
-	    <div ng-controller="ButtonsCtrl">
-	        <h4>Single toggle</h4>
-	        <pre>{{singleModel}}</pre>
-	        <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
-	            Single Toggle
-	        </button>
-	        <h4>Checkbox</h4>
-	        <pre>Model: {{checkModel}}</pre>
-	        <pre>Results: {{checkResults}}</pre>
-	        <div class="btn-group">
-	            <label class="btn btn-primary" ng-model="checkModel.left" uib-btn-checkbox>Left</label>
-	            <label class="btn btn-primary" ng-model="checkModel.middle" uib-btn-checkbox>Middle</label>
-	            <label class="btn btn-primary" ng-model="checkModel.right" uib-btn-checkbox>Right</label>
-	        </div>
-	        <h4>Radio &amp; Uncheckable Radio</h4>
-	        <pre>{{radioModel || 'null'}}</pre>
-	        <div class="btn-group">
-	            <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Left'">Left</label>
-	            <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Middle'">Middle</label>
-	            <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Right'">Right</label>
-	        </div>
-	        <div class="btn-group">
-	            <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'" uncheckable>Left</label>
-	            <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable>Middle</label>
-	            <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'" uib-uncheckable="uncheckable">Right</label>
-	        </div>
-	        <div>
-	            <button class="btn btn-default" ng-click="uncheckable = !uncheckable">
-	                Toggle uncheckable
-	            </button>
-	        </div>
-	    </div>
+
+		<div class="container">
+
+			<div class="formArea">
+				<h1 class="mainTitle"> Welcome to StickIt </h1>
+
+				<uib-tabset active="active" class="loginTabs">
+				    <uib-tab index="0" heading="Login">
+
+						<div ng-controller="RegisterController">
+						    <form class="registrationForm">
+								<div class="form-group">
+									<label for="inputEmail">Email address</label>
+									<input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="user.email">
+								</div>
+
+								<div class="form-group">
+									<label for="inputPassword">Password</label>
+									<input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="user.password">
+								</div>
+
+								<button type="submit" class="btn formBtn" ng-click="login(user)">Login</button>
+						    </form>
+					    </div>
+
+				    </uib-tab>
+				    <uib-tab index="1" heading="Register">
+
+				    	<div ng-controller="LoginController">
+						    <form class="registrationForm">
+								<div class="form-group">
+									<label for="inputFirstName">First name</label>
+									<input type="text" class="form-control" id="inputFirstName" placeholder="First name" ng-model="user.firstName">
+								</div>
+								<div class="form-group">
+									<label for="inputLastName">Last name</label>
+									<input type="text" class="form-control" id="inputLastName" placeholder="Last name" ng-model="user.lastName">
+								</div>
+
+								<div class="form-group">
+									<label for="inputEmail">Email address</label>
+									<input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="user.email">
+								</div>
+
+								<div class="form-group">
+									<label for="inputPassword">Password</label>
+									<input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="user.password">
+								</div>
+
+								<div class="form-group">
+									<label for="inputPasswordConfirm">Confirm password</label>
+									<input type="password" class="form-control" id="inputPasswordConfirm" placeholder="Confirm password" ng-model="user.confirmPassword">
+								</div>
+
+								<button type="submit" class="btn formBtn" ng-click="register(user)">Register</button>
+						    </form>
+				    	</div>
+
+				    </uib-tab>
+				</uib-tabset>
+
+			</div>
+
+		</div>
+
+
 	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
 	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-touch.js"></script>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/packery/1.4.3/packery.pkgd.min.js"></script>
+		<script type="text/javascript" src="/javascripts/angular-packery.js"></script>
+
 	    <script type="text/javascript" src="/javascripts/ui-bootstrap-tpls-1.3.2.min.js"></script>
 	    <script type="text/javascript" src="/javascripts/stickIt.js"></script>
     </body>
