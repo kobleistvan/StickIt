@@ -16,6 +16,6 @@ router.use('/api', function(req, res) {
 });
 
 // Serve the SPA
-router.use('/', index);
+router.use('/', index); // Commented out due to the fact that I don't want to mix handlebars with angular, for now
 
 module.exports = router;

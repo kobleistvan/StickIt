@@ -35,7 +35,7 @@ app.use(require("morgan")((process.env.NODE_ENV ? 'combined' : 'dev'), {
 logger.info("Environment set to: ", process.env.NODE_ENV || 'development (dev)');
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
 app.use(favicon(path.join(__dirname, 'public/favicon', 'favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
