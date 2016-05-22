@@ -1,8 +1,15 @@
 {
-	"users" :{
-		"abcd12d4": {
-			"notes": {
-			}
-		}
-	}
+    "users": {
+        "SJ_jww1Q": {
+            "userData": {
+                "firstName": "Istvan",
+                "lastName": "Koble",
+                "email": "kobleistvan@gmail.com",
+                "passwordHash": "tik9q0DTg/Su3l01+VCxJKexI5m22zXF1aSBxwTfg5GABFBIVBURVTpUN09CvJrr7UGK6LnYXd/8GTL6wZseXQsIEDxU6rzDp5jJJ6MFbFb/0PiUmUIUgNufwPb+CjQOnhf/RTfnP/NJtH9bzoSe3HZMKY66FMd+tRX6bYkPCAWl5TRZ5eqsfwXAv8HmvlhbZHOFW4XJgs7K5D39DrUyXUOc/FDzMBkn1+tOZQco0T6G5wwIuO4ej07FY6Bg3QStet/CvkH/YfMg3dCGYDjxvvmp1RsJY6UxT6r/yhWdgza/RZn7em27u0DY5iMsMtqryhcTF40Ta0/R7GQ640NBnZy8L8ZdZeFXtV9OMM/wGaE3NNpdG5RxkH1MPuM6rk9ca83HN/xM4UgH8MV5BLp2LUJ3HqtmDHJMSBJ7SuttDhzbPN+Yr8nhV8OPmTkVvgxRJR8eiIMDlSF7tMVYNq4QS8kboYsL1ZcgJ1yetHytHbX1nAQmB+CGwNxnXBaaB2YobB9J8fdVf/k/FniifateDfwK7f6ec0uNsToYv9MfY39nOiLOlN6LV4jNAbfJayN2y3VnzgAfdZfS9rTEXwhLp8Bcva43PJrZHjZfHwSVWkd9rU2LL2JS9/npp7+8Vk+nGIp+hR9MrRVl66nGraYf1ROQ+F3210jd9W5Oh0eMQ64=",
+                "passwordSalt": "rbVo2JScWviV90qWR6e4VeFtHPc4p6GrCe3nWWj/k5I=",
+                "registrationDate": "2016-05-22T17:08:48.365Z"
+            },
+            "notes": {}
+        }
+    }
 }

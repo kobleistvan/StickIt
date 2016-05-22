@@ -1,4 +1,4 @@
-// Use strict for all the imported modules. Doesn't apply for this one, have to use classic "use strict".
+// Use strict for all the imported modules. Doesn't apply for this one, so I have to use the classic "use strict" directive.
 "use strict";
 require('use-strict');
 
@@ -41,7 +41,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-app.use(cookieParser());
+app.use(cookieParser("randomsecretToSignCookies!"));
 app.use(helmet());
 
 // Handle every route

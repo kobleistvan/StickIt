@@ -1,5 +1,6 @@
 var express = require('express'),
     router = express.Router(),
+    emailValidator = require('email-validator'),
     middlewares = rootRequire('routes/middlewares'),
     authentication = rootRequire('lib/api/authentication');
 
@@ -51,20 +52,11 @@ router.post('/login', function(req, res, next) {
 });
 
 // Log user out
-router.get('/logout', middlewares.requireToken, function(req, res, next) {
-    if (req.decoded.userId) {
-        // Logout
-        res.clearCookie('x_access_token');
-        res.json({
-            success: true
-        })
-    } else {
-        //Not even logged in...
-        res.json({
-            success: false,
-            message: 'You\'re not logged in'
-        })
-    }
+router.get('/logout', function(req, res, next) {
+    res.clearCookie('x_access_token');
+    res.json({
+        success: true
+    })
 });
 
 // Register a new user
@@ -83,6 +75,12 @@ router.post('/register', function(req, res, next) {
             message: "Email address is too long."
         });
     }
+    if (!emailValidator.validate(req.body.email)) {
+        return callback({
+            success: false,
+            message: "Invalid email address."
+        });
+    };
     if (req.body.password.length > 255) {
         return res.json({
             success: false,
@@ -114,8 +112,9 @@ router.post('/register', function(req, res, next) {
         lastName: req.body.lastName,
         email: req.body.email,
         password: req.body.password
-    }, function (err, response) {
+    }, function(err, response) {
         if (err) {
+            console.log(err);
             return res.json({
                 success: false,
                 message: 'An error occured while signing you up.'
