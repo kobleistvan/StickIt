@@ -118,21 +118,115 @@ form .formBtn:active {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-button {
     width: 8px;
-    height:5px;
+    height: 5px;
 }
+
 ::-webkit-scrollbar-track {
-    background:#eee;
+    background: #eee;
     border: thin solid lightgray;
     box-shadow: 0px 0px 3px #dfdfdf inset;
-    border-radius:10px;
+    border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
-    background:#999;
+    background: #999;
     border: thin solid gray;
-    border-radius:10px;
+    border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-    background:#7d7d7d;
-}           
+    background: #7d7d7d;
+}
+
+#stickyNotesCollection {
+    font-family: arial, sans-serif;
+    font-size: 100%;
+    margin: 3em;
+    color: #fff;
+}
+
+#stickyNotesCollection h2,
+p {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+#stickyNotesCollection ul {
+    overflow: hidden;
+    padding: 3em;
+}
+
+#stickyNotesCollection ul li {
+    list-style: none;
+    margin: 1em;
+    float: left;
+}
+
+#stickyNotesCollection ul li h2 {
+    font-size: 140%;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#stickyNotesCollection ul li p {
+    font-family: "Reenie Beanie", arial, sans-serif;
+    font-size: 180%;
+}
+
+#stickyNotesCollection ul li:nth-child(even) a {
+    -o-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+    background: #cfc;
+}
+
+#stickyNotesCollection ul li:nth-child(3n) a {
+    -o-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+    background: #ccf;
+}
+
+#stickyNotesCollection ul li:nth-child(5n) a {
+    -o-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    position: relative;
+    top: -10px;
+}
+
+#stickyNotesCollection ul li a:hover,
+ul li a:focus {
+    -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+}
+
+#stickyNotesCollection ul li a {
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    -moz-transition: -moz-transform .15s linear;
+    -o-transition: -o-transform .15s linear;
+    -webkit-transition: -webkit-transform .15s linear;
+}
+
