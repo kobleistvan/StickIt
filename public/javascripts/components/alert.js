@@ -18,7 +18,7 @@ function AlertController($scope) {
 
 };
 
-stickItModule.component('alertComponent', {
+stickItComponent.component('alertComponent', {
     templateUrl: "/javascripts/components/alert.html",
     controller: AlertController
 });

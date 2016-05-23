@@ -86,3 +86,13 @@ form .formBtn:active {
     left:30%;
     right: 30%;
 }
+
+.navbar-btn{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#brandLogo{
+    max-height: 25px;
+    display: inline;
+}

@@ -46,7 +46,7 @@ function RegisterController($scope, $http, $rootScope) {
     };
 };
 
-stickItModule.component('registerFormComponent', {
+stickItComponent.component('registerFormComponent', {
     templateUrl: "/javascripts/components/registerForm.html",
     controller: RegisterController
 });
