@@ -1,4 +1,4 @@
-function LoginController($scope, $http, $rootScope) {
+function LoginController($scope, $http, $rootScope, $state) {
 
     this.login = function(user) {
         var email = user.email;
@@ -23,6 +23,7 @@ function LoginController($scope, $http, $rootScope) {
                     type: "success"
                 });
 
+                $state.go('dashboard');
             } else {
                 $rootScope.$broadcast("alert:add", {
                     msg: result.data.message,

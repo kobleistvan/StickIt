@@ -1,4 +1,4 @@
-function DashboardController($scope) {
+function DashboardController($scope, $http) {
 
 };
 

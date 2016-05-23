@@ -54,9 +54,22 @@ router.post('/login', function(req, res, next) {
 // Log user out
 router.get('/logout', function(req, res, next) {
     res.clearCookie('x_access_token');
-    res.json({
+    return res.json({
         success: true
     })
+});
+
+// Is the user logged in?
+router.get('/loggedin', middlewares.optionalToken, function(req, res, next) {
+    if (req.decoded.userId) {
+        return res.json({
+            success: true
+        })
+    } else {
+        return res.json({
+            success: false
+        })
+    }
 });
 
 // Register a new user
