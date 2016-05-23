@@ -17,6 +17,22 @@ stickIt.controller('SettingsModalControllerInstance', function($scope, $rootScop
 
     $scope.user = {};
 
+	this.getAccountDetails = function() {
+        $http.get('/api/account/').then(function(result) {
+            if (result.data.success) {
+            	$scope.user.firstName = result.data.accountDetails.firstName;
+            	$scope.user.lastName = result.data.accountDetails.lastName;
+            } else {
+                return $rootScope.$broadcast("alert:add", {
+                    msg: result.err,
+                    type: "danger"
+                });
+            }
+        });
+	};
+
+	this.getAccountDetails();
+
     $scope.updateDetails = function(user) {
         var firstName = user.firstName;
         var lastName = user.lastName;

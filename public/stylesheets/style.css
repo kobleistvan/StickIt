@@ -99,3 +99,12 @@ form .formBtn:active {
 }
 
 #stickyNotesPane {}
+
+
+.updateDetailsForm, .changePasswordForm, .deleteAccountForm{
+    padding: 5px;
+}
+
+#deleteAccountButton {
+    display: inherit;
+}
