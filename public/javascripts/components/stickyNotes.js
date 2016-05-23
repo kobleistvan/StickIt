@@ -27,22 +27,24 @@ function StickyNotesController($scope, $http, $rootScope) {
 
     $scope.stickyNotes = [];
 
+    $scope.$watch('stickyNotes', function(stickyNotes) {
+        console.log(stickyNotes);
+        // one of the items changed
+    }, true);
+
     $scope.fetchNotes = function() {
         $http.get('/api/stickynote/').then(function(result) {
             if (result.data.success) {
                 var stickyNotes = result.data.stickyNotes;
-
                 var stickyNoteKeys = Object.keys(stickyNotes);
 
                 for (var i = 0; i < stickyNoteKeys.length; i++) {
                     var key = stickyNoteKeys[i];
-
                     $scope.stickyNotes.push({
-                        size: {
-                            x: 1,
-                            y: 1
-                        },
-                        position: [2, 2],
+                        sizeX: stickyNotes[key].sizeX,
+                        sizeY: stickyNotes[key].sizeY,
+                        row: stickyNotes[key].row,
+                        col: stickyNotes[key].col,
                         id: key,
                         note: stickyNotes[key].note,
                         title: stickyNotes[key].title,
@@ -79,18 +81,21 @@ function StickyNotesController($scope, $http, $rootScope) {
 
         $http.post('/api/stickynote/', {
             title: 'Title',
-            note: '...'
+            note: '...',
+            sizeX: 2,
+            sizeY: 1,
+            col: 0,
+            row: 0
         }).then(function(result) {
             if (result.data.success) {
                 console.log(result.data);
                 var newStickyId = result.data.noteId;
 
                 $scope.stickyNotes.push({
-                    size: {
-                        x: 1,
-                        y: 1
-                    },
-                    position: [2, 2],
+                    sizeX: 2,
+                    sizeY: 1,
+                    col: 0,
+                    row: 0,
                     id: newStickyId,
                     note: '...',
                     title: 'Title'
@@ -111,7 +116,11 @@ function StickyNotesController($scope, $http, $rootScope) {
 
         $http.put('/api/stickynote/' + stickyNote.id, {
             title: stickyNote.title,
-            note: stickyNote.note
+            note: stickyNote.note,
+            sizeX: stickyNote.sizeX,
+            sizeY: stickyNote.sizeY,
+            col: stickyNote.col,
+            row: stickyNote.row
         }).then(function(result) {
             if (result.data.success) {
                 that.fetchNote(stickyNote, true);

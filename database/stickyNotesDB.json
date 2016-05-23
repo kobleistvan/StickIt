@@ -4,31 +4,50 @@
             "userData": {
                 "firstName": "Istvan",
                 "lastName": "Koble",
-                "email": "kobleistvan@gmail.com",
-                "passwordHash": "xPGxcjppcvYnWy4B38pUXrS5QTbtwDsL/LoLyNCuqkSu2iidxZEyE1Udly148AlptqQ6qfHRmTvxBBM0p/5C7DAwFV9U88vuvFyNflR9V0KNaqeVsALMcJHXI6iKgCvKoqEX+L7NrGeAJQLK9/YV8QTZ/Mjh3wbve3ve0vMeaVD+d/cBjaFCDmtG2GCP+llfr0t2AhAz6QzCzMw0tQqbkZ1TgGUE5YcFkks1PqJfmgl8JANdlYs3AcUbBAR4jrTuoRikzAw15CLtyU3IC6pMkP+s/2/iVW1HNltfIVjz0t4kRJTlkmxyYqw95dF/YBo2LJkvpJJGD0sJw1/8nPpAnJZ074knV+LJFeW3o9RLAmiH6dnhLhCDDoHmz2Ditlm0oMfv7tnqc2yKFiH4t9dgKc8E51tQrYB92wQKAcW9sMqKF/RAsAu7mmROn/SDN3Opmp+b9vGfjPRLRYaikkNhsXOSM/IeKKbc64+LjBDbWjAO9XgDgHx2jQHi+BI2TKAjZ7w2yl3BkYAYlAaehNXWj+06bofy89e3eiKtb4/xmQY8a98upNFwEa3RDX7qER/verLghvKtJhIGBAtOwzdXoRb+gJCqtQFmTU/SEEP21m4HyMZv38XIbRAQzfjZ80ZVWkC4fVTLy0Y5YS8I90ItUmtPh4SuFmWHKG0MUydmEJA=",
-                "passwordSalt": "BgxuqZ+m4b9IGemCokzSHWuHuq5A3RIFxfeMhPW6fh8=",
+                "email": "totalrandom@gmail.com",
+                "passwordHash": "Mq86L1yaw8vrWRRxhOTp32COOIivEkO8gUTO6wQfWz2OfgH/VCWXI0Sd46cLrcoNsbdJZgnPVWZDrTssSiMcw7jmJIjR0kWuvo5EzGeKXPRmuubWXC67yMvK4qYsNP/k95yPkwtkteRZNz0xY9ZibF6lHXnQIxPWijxvwISS89Oi1k76hc9Ox40QzS/IP0dOvkVIkeONUmPJSyLchWt/ImxSJ3qtEyUwm69B9+WGeR3hM0vsikhh1TcZqq2ESA/N+ls6i42JbmKEWJEjWCtif01gHoHAXmdtPgpOR9rRNwa2g/x1x5LWQRBK2PEoNvrRhlUJ0z6YF00ruC3ayOcy5+GR/JE4gg0DQ6/hF1cVYN2LNVgUiVGgnJ9AWvmE7ySj88M9R2X1kqjHJlWrNnYTy0nc5FZKtft5Gakowh1Xhbf/GRkWgQuC7p4TrrMDSw6DPYILw+iiBON2DoeSSqpJAHaMIrG9HmUQMAu4QNtxKyDYonAuk3nvk9WfikrDkvP7MU1woAsiOnBzzwbK59BtC5JQIYq2ga1rfDUq7UvLfChrYwfRCV+N7FjThE3EBWh6GWuxZu3aJF3ZqK8qzss2igdlrEyxk4TQMNEsjznzW+mobccpJe95HhHawSo/W6gpVBQEh+ySt+kwD+Z7YbHnS3D+xK+QVKEMUTEz8lcZ5+g=",
+                "passwordSalt": "t46PB8oBoLO97VTkn2uuytmv+T/MZEZ9E3kyOkOAHqM=",
                 "registrationDate": "May 23rd 2016, 11:53:57 am"
             },
             "notes": {
                 "BkoNz0lX": {
                     "title": "My first stickynote!",
                     "note": "Hello world! This is my first stickynote! Yay",
-                    "modifiedAt": "May 23rd 2016, 1:54:00 pm"
+                    "modifiedAt": "May 23rd 2016, 4:35:46 pm",
+                    "col": 0,
+                    "row": 0
                 },
                 "HyvSG0l7": {
                     "title": "My second stickynote",
                     "note": "Apparently, this also works!",
-                    "modifiedAt": "May 23rd 2016, 11:55:59 am"
+                    "modifiedAt": "May 23rd 2016, 4:31:31 pm",
+                    "col": 2,
+                    "row": 0
                 },
                 "By0LM0g7": {
                     "title": "To do",
                     "note": "Buy eggs, fish, bread, fight crime",
-                    "modifiedAt": "May 23rd 2016, 2:47:45 pm"
+                    "modifiedAt": "May 23rd 2016, 4:32:30 pm",
+                    "col": 4,
+                    "row": 0,
+                    "sizeY": 2
                 },
-                "SyVq_WZQ": {
+                "HkSxlzZm": {
                     "title": "Title",
                     "note": "...",
-                    "modifiedAt": "May 23rd 2016, 3:47:40 pm"
+                    "modifiedAt": "May 23rd 2016, 4:35:25 pm",
+                    "col": 2,
+                    "row": 1,
+                    "sizeX": 1
+                },
+                "undefined": {
+                    "note": "Resize me\nDrag me around",
+                    "title": "Try to:",
+                    "modifiedAt": "May 23rd 2016, 4:41:09 pm",
+                    "sizeX": 1,
+                    "sizeY": 1,
+                    "col": 0,
+                    "row": 1
                 }
             },
             "userId": "Bk6p-Rl7"

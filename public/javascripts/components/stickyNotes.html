@@ -1,10 +1,9 @@
 <div id="stickyNotesPane" class="panel">
     <div id="stickyNotesCollection" gridster="gridsterOpts">
         <ul>
-            <li gridster-item="stickyNote" row="stickyNote.position[0]" col="stickyNote.position[1]" size-x="stickyNote.size.x" size-y="stickyNote.size.y"  ng-repeat="stickyNote in stickyNotes">
+            <li gridster-item="stickyNote" row="stickyNote.row" col="stickyNote.col" size-x="stickyNote.sizeX" size-y="stickyNote.sizeY"  ng-repeat="stickyNote in stickyNotes">
                 <a href=#>
                     <div class="dragHandle" data-toggle="tooltip" title="Drag me around">
-                        <!-- {{stickyNote}} -->
                         <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
                         <button type="button" class="btn btn-lg" ng-click="delete(stickyNote)">
                             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>

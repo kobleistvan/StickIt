@@ -70,7 +70,11 @@ router.post('/', function(req, res, next) {
     stickyNotes.addStickyNote({
     	userId: req.decoded.userId,
         note: req.body.note,
-        title: req.body.title
+        title: req.body.title,
+        sizeX: req.body.sizeX,
+        sizeY: req.body.sizeY,
+        col: req.body.col,
+        row: req.body.row
     }, function(err, response) {
         if (err) {
             return res.json({
@@ -109,7 +113,11 @@ router.put('/:id', function(req, res, next) {
     	userId: req.decoded.userId,
         stickyNoteId: req.params.id,
         note: req.body.note,
-        title: req.body.title
+        title: req.body.title,
+        sizeX: req.body.sizeX,
+        sizeY: req.body.sizeY,
+        col: req.body.col,
+        row: req.body.row
     }, function(err, response) {
         if (err) {
             return res.json({
