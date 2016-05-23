@@ -1,14 +1,18 @@
 <div id="stickyNotesPane" class="panel">
-    <div id="stickyNotesCollection" gridster>
+    <div id="stickyNotesCollection" gridster="gridsterOpts">
         <ul>
-            <li gridster-item="stickyNote" ng-repeat="stickyNote in stickyNotes">
+            <li gridster-item="stickyNote" row="stickyNote.position[0]" col="stickyNote.position[1]" size-x="stickyNote.size.x" size-y="stickyNote.size.y"  ng-repeat="stickyNote in stickyNotes">
                 <a href=#>
-                    <button type="button" class="btn btn-lg" ng-click="delete(stickyNote)">
-                      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-lg" ng-click="edit(stickyNote)">
-                      <span class="glyphicon glyphicon-floppy-disk saveButton" aria-hidden="true"></span>
-                    </button>
+                    <div class="dragHandle" data-toggle="tooltip" title="Drag me around">
+                        <!-- {{stickyNote}} -->
+                        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                        <button type="button" class="btn btn-lg" ng-click="delete(stickyNote)">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-lg saveButton" ng-click="edit(stickyNote)">
+                            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                        </button>
+                    </div>
                     <input ng-model="stickyNote.title">
                     <div class="content">
                         <textarea ng-model="stickyNote.note"></textarea>
@@ -17,5 +21,10 @@
                 <p class="date">Last change at {{stickyNote.modifiedAt}}</p>
             </li>
         </ul>
+    </div>
+    <div id="addNewSticky" data-toggle="tooltip" title="Add a new sticky note">
+        <button type="button" class="btn btn-lg" ng-click="create()">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
     </div>
 </div>
