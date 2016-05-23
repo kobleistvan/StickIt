@@ -4,11 +4,14 @@
             <li gridster-item="stickyNote" ng-repeat="stickyNote in stickyNotes">
                 <a href=#>
                     <button type="button" class="btn btn-lg" ng-click="delete(stickyNote)">
-                      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;
+                      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                     </button>
-                    <input value={{stickyNote.title}}>
+                    <button type="button" class="btn btn-lg" ng-click="edit(stickyNote)">
+                      <span class="glyphicon glyphicon-floppy-disk saveButton" aria-hidden="true"></span>
+                    </button>
+                    <input ng-model="stickyNote.title">
                     <div class="content">
-                        <textarea>{{stickyNote.note}}</textarea>
+                        <textarea ng-model="stickyNote.note"></textarea>
                     </div>
                 </a>
                 <p class="date">Last change at {{stickyNote.modifiedAt}}</p>
