@@ -2,7 +2,7 @@ function AuthenticationController($scope) {
 
 };
 
-stickItComponent.component('authenticationComponent', {
+stickIt.component('authenticationComponent', {
     templateUrl: "/javascripts/components/authentication.html",
     controller: AuthenticationController
 });

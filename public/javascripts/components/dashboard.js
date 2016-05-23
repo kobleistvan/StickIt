@@ -2,7 +2,7 @@ function DashboardController($scope, $http) {
 
 };
 
-stickItComponent.component('dashboardComponent', {
+stickIt.component('dashboardComponent', {
     templateUrl: "/javascripts/components/dashboard.html",
     controller: DashboardController
 });

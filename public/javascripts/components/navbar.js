@@ -1,8 +1,4 @@
-function NavbarController($scope, $http, $state) {
-
-    this.openSettings = function() {
-        console.log('Opening settings modal');
-    };
+function NavbarController($scope, $http, $state, $rootScope) {
 
     this.logout = function() {
         $http.get('/api/authentication/logout').then(function(result) {
@@ -19,7 +15,7 @@ function NavbarController($scope, $http, $state) {
 
 };
 
-stickItComponent.component('navbarComponent', {
+stickIt.component('navbarComponent', {
     templateUrl: "/javascripts/components/navbar.html",
     controller: NavbarController
 });

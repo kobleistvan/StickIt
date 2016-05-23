@@ -37,7 +37,7 @@ function LoginController($scope, $http, $rootScope, $state) {
 
 };
 
-stickItComponent.component('loginFormComponent', {
+stickIt.component('loginFormComponent', {
     templateUrl: "/javascripts/components/loginForm.html",
     controller: LoginController
 });

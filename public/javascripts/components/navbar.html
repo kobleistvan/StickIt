@@ -3,8 +3,8 @@
         <a class="navbar-brand" href="#"><img alt="StickIt" id="brandLogo" src='favicon/favicon-96x96.png'> StickIt</a>
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <div>
-                    <button class="btn btn-default navbar-btn" ng-click="$ctrl.openSettings()">
+                <div ng-controller="SettingsModalController">
+                    <button class="btn btn-default navbar-btn" ng-click="openSettings()">
                         Settings
                     </button>
                 </div>

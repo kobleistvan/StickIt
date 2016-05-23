@@ -1,4 +1,4 @@
-var stickItComponent = angular.module('stickIt', ['ui.bootstrap', 'angular-packery', 'ngResource', 'ui.router']);
+var stickIt = angular.module('stickIt', ['ui.bootstrap', 'angular-packery', 'ngResource', 'ui.router']);
 
 var initializeApp = function($http, $state) {
 
@@ -14,7 +14,7 @@ var initializeApp = function($http, $state) {
 };
 
 // Define route states and templates to render
-stickItComponent.config(function($stateProvider, $urlRouterProvider) {
+stickIt.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/');
 
@@ -26,4 +26,4 @@ stickItComponent.config(function($stateProvider, $urlRouterProvider) {
 
 });
 
-stickItComponent.run(initializeApp);
+stickIt.run(initializeApp);

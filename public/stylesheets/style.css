@@ -2,8 +2,6 @@ body {
     background-image: url('../images/backgroundImage.jpg');
 }
 
-.registrationForm {}
-
 .mainTitle {
     text-align: center;
     margin-bottom: 50px;
@@ -12,7 +10,6 @@ body {
 }
 
 .formArea {
-    /*background-color: rgba(255,255,255,.5);*/
     max-width: 500px;
     margin: auto;
     margin-top: 15%;
@@ -80,14 +77,15 @@ form .formBtn:active {
 }
 
 .myAlert {
-    margin-top: 60px;
+    margin-top: 80px;
     position: fixed;
     text-align: center;
-    left:30%;
+    left: 30%;
     right: 30%;
+    z-index: 99999;
 }
 
-.navbar-btn{
+.navbar-btn {
     margin-left: 10px;
     margin-right: 10px;
     color: white;
@@ -95,7 +93,9 @@ form .formBtn:active {
     font-weight: bolder;
 }
 
-#brandLogo{
+#brandLogo {
     max-height: 25px;
     display: inline;
 }
+
+#stickyNotesPane {}
