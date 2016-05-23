@@ -6,4 +6,10 @@
 [![bitHound Dev Dependencies](https://www.bithound.io/github/kobleistvan/StickIt/badges/devDependencies.svg)](https://www.bithound.io/github/kobleistvan/StickIt/master/dependencies/npm)
 [![bitHound Code](https://www.bithound.io/github/kobleistvan/StickIt/badges/code.svg)](https://www.bithound.io/github/kobleistvan/StickIt)
 
-My first Angular application
+My first probably AngularJS application with probably an overengineered backend and a beginner-level frontend :).
+
+Run npm install && npm start
+
+Default user:
+Email: totalrandom@gmail.com
+Password: asdf1234
