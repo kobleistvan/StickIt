@@ -1,4 +1,4 @@
-var stickIt = angular.module('stickIt', ['ui.bootstrap', 'angular-packery', 'ngResource', 'ui.router']);
+var stickIt = angular.module('stickIt', ['ui.bootstrap', 'ngResource', 'ui.router']);
 
 var initializeApp = function($http, $state) {
 

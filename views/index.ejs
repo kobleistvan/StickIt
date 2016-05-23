@@ -5,6 +5,8 @@
 
 	    <!-- Latest compiled and minified Bootstrap3 CSS -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	    <!-- Angular Gridster -->
+	    <link rel='stylesheet' href='/stylesheets/angular-gridster.min.css' />
 	    <!-- Own CSS -->
 	    <link rel='stylesheet' href='/stylesheets/style.css' />
 	    <!-- Favion stuff (android compatibility, etc) -->
@@ -29,7 +31,7 @@
     </head>
     <body ng-app="stickIt">
 
-		<div class="container">
+		<div class="container-fluid">
 			<alert-component></alert-component>
 			<div ui-view></div>
 		</div>
@@ -43,12 +45,14 @@
 
 	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
 
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/packery/1.4.3/packery.pkgd.min.js"></script>
-		<script type="text/javascript" src="/javascripts/angular-packery.js"></script>
+	    <script type="text/javascript" src="/javascripts/angular-gridster.min.js"></script>
+	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-resize/1.1/jquery.ba-resize.min.js"></script>
 
 	    <script type="text/javascript" src="/javascripts/ui-bootstrap-tpls-1.3.2.min.js"></script>
+
 	    <script type="text/javascript" src="/javascripts/stickIt.js"></script>
+
 	    <script type="text/javascript" src="/javascripts/components/loginForm.js"></script>
 	    <script type="text/javascript" src="/javascripts/components/registerForm.js"></script>
 	    <script type="text/javascript" src="/javascripts/components/alert.js"></script>

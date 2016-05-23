@@ -1,10 +1,10 @@
 function NavbarController($scope, $http, $state, $rootScope) {
-	$scope.welcomeMessage;
+    $scope.welcomeMessage;
 
-	this.getAccountDetails = function() {
+    this.getAccountDetails = function() {
         $http.get('/api/account/').then(function(result) {
             if (result.data.success) {
-            	$scope.welcomeMessage = " — Welcome, " + result.data.accountDetails.firstName + "!";
+                $scope.welcomeMessage = " — Welcome, " + result.data.accountDetails.firstName + "!";
 
             } else {
                 return $rootScope.$broadcast("alert:add", {
@@ -13,7 +13,7 @@ function NavbarController($scope, $http, $state, $rootScope) {
                 });
             }
         });
-	};
+    };
 
     this.logout = function() {
         $http.get('/api/authentication/logout').then(function(result) {
@@ -28,7 +28,7 @@ function NavbarController($scope, $http, $state, $rootScope) {
         });
     };
 
-	this.getAccountDetails();
+    this.getAccountDetails();
 
 };
 
