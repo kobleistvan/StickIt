@@ -1,5 +1,8 @@
 {
-    "ignore": [],
+    "ignore": [
+    	"public/javascripts/angular-gridster.min.js",
+    	"public/javascripts/ui-bootstrap-tpls-1.3.2.min.js",
+    ],
     "dependencies": {
 	    "unused-ignores": [
 	      "debug",
