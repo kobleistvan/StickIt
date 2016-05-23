@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon -e js,json,css,hbs,html ./bin/www"
+    "start": "nodemon -e js,json,css,hbs,html --ignore 'database/*.json' ./bin/www"
   },
   "dependencies": {
     "@angular/common": "^2.0.0-rc.1",
