@@ -59,11 +59,18 @@ router.post('/', function(req, res, next) {
             message: "Stickynote is empty."
         })
     }
+    if (!req.body.title) {
+        return res.json({
+            success: false,
+            message: "Stickynote doesn't have a title."
+        })
+    }
 
     // Add new stickynote
     stickyNotes.addStickyNote({
     	userId: req.decoded.userId,
-        note: req.body.note
+        note: req.body.note,
+        title: req.body.title
     }, function(err, response) {
         if (err) {
             return res.json({
@@ -90,12 +97,19 @@ router.put('/:id', function(req, res, next) {
             message: "Stickynote is empty."
         })
     }
+    if (!req.body.title) {
+        return res.json({
+            success: false,
+            message: "Stickynote doesn't have a title."
+        })
+    }
 
     // Edit stickynote
     stickyNotes.editStickyNote({
     	userId: req.decoded.userId,
         stickyNoteId: req.params.id,
-        note: req.body.note
+        note: req.body.note,
+        title: req.body.title
     }, function(err, response) {
         if (err) {
             return res.json({
