@@ -90,6 +90,9 @@ form .formBtn:active {
 .navbar-btn{
     margin-left: 10px;
     margin-right: 10px;
+    color: white;
+    background-color: black;
+    font-weight: bolder;
 }
 
 #brandLogo{
