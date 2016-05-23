@@ -1,4 +1,4 @@
-function RegisterController($scope, $http) {
+function RegisterController($scope, $http, $rootScope) {
 
     this.register = function(user) {
         var email = user.email;
@@ -7,7 +7,42 @@ function RegisterController($scope, $http) {
         var password = user.password;
         var confirmPassword = user.confirmPassword;
 
-        console.log("Making a request to the server with " + email + " and " + password + " and the rest...");
+        // Validate fields
+        if (!email || !password || !firstName || !lastName || !confirmPassword) {
+            return $rootScope.$broadcast("alert:add", {
+                msg: "Please fill in all the fields!",
+                type: "warning"
+            });
+        }
+
+        if (password !== confirmPassword) {
+            return $rootScope.$broadcast("alert:add", {
+                msg: "You did not confirm your password correctly!",
+                type: "warning"
+            });
+        }
+
+        $http.post('/api/authentication/register', {
+            email: email,
+            password: password,
+            firstName: firstName,
+            lastName: lastName
+        }).then(function(result) {
+            if (result.data.success) {
+                $rootScope.$broadcast("alert:add", {
+                    msg: "Welcome! Now please login.",
+                    type: "success"
+                });
+
+            } else {
+                $rootScope.$broadcast("alert:add", {
+                    msg: result.data.message,
+                    type: "danger"
+                });
+            }
+
+        });
+
     };
 };
 

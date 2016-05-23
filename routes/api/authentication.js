@@ -116,7 +116,7 @@ router.post('/register', function(req, res, next) {
         if (err) {
             return res.json({
                 success: false,
-                message: 'An error occured while signing you up.'
+                message: err.message
             });
         } else {
             return res.json({

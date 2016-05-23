@@ -4,34 +4,33 @@ function LoginController($scope, $http, $rootScope) {
         var email = user.email;
         var password = user.password;
 
+        // Validate fields
         if (!email || !password) {
-            $rootScope.$broadcast("alert:add", {
+            return $rootScope.$broadcast("alert:add", {
                 msg: "Please fill in all the fields!",
                 type: "warning"
             });
-        } else {
-            $http.post('/api/authentication/login', {
-                email: email,
-                password: password
-            }).then(function(result) {
-                if (result.data.success){
-                    $rootScope.$broadcast("alert:add", {
-                        msg: "Welcome back!",
-                        type: "success"
-                    });
-
-                } else {
-                    $rootScope.$broadcast("alert:add", {
-                        msg: result.data.message,
-                        type: "danger"
-                    });
-                }
-
-            });
-
         }
 
-  
+        // Log the user in
+        $http.post('/api/authentication/login', {
+            email: email,
+            password: password
+        }).then(function(result) {
+            if (result.data.success){
+                $rootScope.$broadcast("alert:add", {
+                    msg: "Welcome back!",
+                    type: "success"
+                });
+
+            } else {
+                $rootScope.$broadcast("alert:add", {
+                    msg: result.data.message,
+                    type: "danger"
+                });
+            }
+
+        });
 
     };
 
