@@ -230,3 +230,8 @@ ul li a:focus {
     -webkit-transition: -webkit-transform .15s linear;
 }
 
+#stickyNotesCollection ul li a {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
