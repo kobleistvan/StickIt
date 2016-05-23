@@ -13,11 +13,11 @@ stickIt.controller('SettingsModalController', function($scope, $uibModal) {
 
 });
 
-stickIt.controller('SettingsModalControllerInstance', function($scope, $rootScope, $uibModalInstance, $http) {
+stickIt.controller('SettingsModalControllerInstance', function($scope, $rootScope, $uibModalInstance, $http, $state) {
 
-	$scope.user={};
+    $scope.user = {};
 
-	$scope.updateDetails = function(user) {
+    $scope.updateDetails = function(user) {
         var firstName = user.firstName;
         var lastName = user.lastName;
 
@@ -29,12 +29,12 @@ stickIt.controller('SettingsModalControllerInstance', function($scope, $rootScop
             });
         }
 
-        // Log the user in
+        // Edit account details
         $http.put('/api/account/', {
             firstName: firstName,
-            password: lastName
+            lastName: lastName
         }).then(function(result) {
-            if (result.data.success){
+            if (result.data.success) {
                 $rootScope.$broadcast("alert:add", {
                     msg: "Account details changed successfully.",
                     type: "success"
@@ -48,11 +48,68 @@ stickIt.controller('SettingsModalControllerInstance', function($scope, $rootScop
             }
 
         });
-	};
+    };
 
-	$scope.changePassword = function() {
+    $scope.changePassword = function(user) {
+        var newPassword = user.newPassword;
+        var newPasswordConfirm = user.newPasswordConfirm;
 
-	};
+        // Validate fields
+        if (!newPassword || !newPasswordConfirm) {
+            return $rootScope.$broadcast("alert:add", {
+                msg: "Please fill in all the fields!",
+                type: "warning"
+            });
+        }
+
+        if (newPassword !== newPasswordConfirm) {
+            return $rootScope.$broadcast("alert:add", {
+                msg: "You did not confirm your password correctly.",
+                type: "warning"
+            });
+        }
+
+        // Change user password
+        $http.put('/api/account/password', {
+            password: newPassword
+        }).then(function(result) {
+            if (result.data.success) {
+                $rootScope.$broadcast("alert:add", {
+                    msg: "Account details changed successfully.",
+                    type: "success"
+                });
+
+            } else {
+                $rootScope.$broadcast("alert:add", {
+                    msg: result.data.message,
+                    type: "danger"
+                });
+            }
+
+        });
+    };
+
+    $scope.deleteAccount = function() {
+
+        // Delete user account
+        $http.delete('/api/account').then(function(result) {
+            if (result.data.success) {
+                $uibModalInstance.close();
+                $rootScope.$broadcast("alert:add", {
+                    msg: "Account successfully deleted.",
+                    type: "success"
+                });
+                $state.go('authentication');
+
+            } else {
+                $rootScope.$broadcast("alert:add", {
+                    msg: result.data.message,
+                    type: "danger"
+                });
+            }
+
+        });
+    };
 
     $scope.close = function() {
         $uibModalInstance.close();

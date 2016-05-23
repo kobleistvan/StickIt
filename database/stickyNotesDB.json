@@ -1,32 +1,16 @@
 {
     "users": {
-        "SykR4Oy7": {
-            "userData": {
-                "firstName": "Istvan",
-                "lastName": "Koble",
-                "email": "kobleistvan@gmail.com",
-                "passwordHash": "Ugs3YAwLalidFvdrLD+lEqlCW8L5U8vCP8gPTdLdNl3kyJ+xmT2D7FeNeIIeleNNW0WA8JoGwfFKult5i9gxBi1tMr9hj0SnFuOSeNrk6+/Od9xj9ZDW/u+B0J3tdEzA/vBOKTrjCdLkFK+NB7dyoBJmKdVunoSwvuJYPYpG5lCG+PyMNZVR0GB0q/8mDT51yJL9H32ZGm2oHhxPK3Q8a7EA1FXKOIf/mb69r5dHnvKRpRaFA3iBeyb/j/VpmxvHF7B3OCRrHZ41bhi+XhUy5d9ZvM6zFuswu5Xcvmrw5fsYpNiN8f/obxX42AtOf0mUyWSbg78RU60gh2QHwZ96MrEC+QNTDpEuCFDX/3PvkHprPjZaih6Lom8cVM5HMhJnYFJlPpZefXRiwvcRPJ9we1sGb8NmWIoObJdT+AowFz3mkRmhSKvWckRUkYeRlZ7vJSaM7yp8BpEIi8ozqS63z8D+y7A60MY5Rqn1MkiWZ6oUkQWffoa68B+1J3wemW5rqtWaWdSewq04lUMg4e6eHS7MWFGJoNHD73P+kJTRd2VG9v7GUqgX34z3z4Up9CzW67f8Kd/Vashi20xwXn1TNXCerNjbhWDCaTjR5gInhhIEx6iMo2G0wngFMx0P63fFf79lMjW5Pj9Sh66ByQQ/b9FF1Snkd4b3Zm/Fg2bV4+U=",
-                "passwordSalt": "2efysdF78991LrdsbCao2S8GIEPwy8BQQgHQBSzhvuM=",
-                "registrationDate": "2016-05-22T18:04:54.915Z"
-            },
-            "notes": {
-                "H1qkBd1Q": {
-                    "note": "hello world! again",
-                    "modifiedAt": "2016-05-22T18:05:22.390Z"
-                }
-            },
-            "userId": "SykR4Oy7"
-        },
         "SJ6vlme7": {
             "userData": {
                 "firstName": "Istvan",
                 "lastName": "Koble",
-                "email": "kobleistvan2@gmail.com",
+                "email": "kobleistvan@gmail.com",
                 "passwordHash": "H42id6aB8sbV8wfH4+IyILmIgTEYc4HAJEBpmVRV4pDlKQXYkhLHhS96IDwE7OQl2eGkho+wBfNRb1pU7J9D7K/UOSKA1/WFmU/y4V4pYaL7Un/w9fEXzskF0DRxrthgTT9naytAYIKc7cliQtX1xq+GdKIX9zwscL3XcTU+8MSadSfyykndxzjA/JItJZlDRurphCGXXkrChDTaAqR/EH4Qnve0ih7P6lsce73MrhB/DpEp9k6dNpvUz+Q2FCNqVGElOsvxXTXubplEgdMTyMZzepxBzIxkOVlka2lmKuDkMs2lC7hlfShOaEK8xe/nT7NxpfeIVLLMj57vav5ztXPYSEAin3P8KlLlt27IB2d71aIQ79y+EOAsHzQEeJ9h5G2JJrB4nooP7L9VUCfZNxZ60rtxnh5gfJ9qI+kVkvMbcJF8/LcBfz9JmvX7i9dVkv0mktn6g0284UWMmr/zXEYkV3X+/ZdK4yMlsRtIaotDGfLbQABXSVKoophQhHQ/3ysh/7LAs8bis4v3SvZCLC6gkxlwGwMpx6/TtBbTFrjdkhXYhKx9fn+13xDCTdGDDyAbh60KcVqHoJRah1FElj8aawvxlBL8Z6SjpaRwzr3OZ5nakTvpGBN5cTBokgJhd0zhoa5kpCyJa8i1VaaaJeoFg4QRQ2MHGx1ueWU/dPk=",
                 "passwordSalt": "UowyDoHDhZ3rrm9bTB+yUZQTrWpwGEDijGKp/EbOa3M=",
                 "registrationDate": "2016-05-23T06:17:08.760Z"
             },
-            "notes": {}
+            "notes": {},
+            "userId": "SJ6vlme7"
         }
     }
 }

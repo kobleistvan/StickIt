@@ -89,7 +89,7 @@ router.post('/register', function(req, res, next) {
         });
     }
     if (!emailValidator.validate(req.body.email)) {
-        return callback({
+        return res.json({
             success: false,
             message: "Invalid email address."
         });
