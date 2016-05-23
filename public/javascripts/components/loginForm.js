@@ -1,15 +1,38 @@
-function LoginController($scope, $http) {
+function LoginController($scope, $http, $rootScope) {
 
     this.login = function(user) {
         var email = user.email;
         var password = user.password;
 
-        console.log("Making a request to the server with " + email + " and " + password);
+        if (!email || !password) {
+            $rootScope.$broadcast("alert:add", {
+                msg: "Please fill in all the fields!",
+                type: "warning"
+            });
+        } else {
+            $http.post('/api/authentication/login', {
+                email: email,
+                password: password
+            }).then(function(result) {
+                if (result.data.success){
+                    $rootScope.$broadcast("alert:add", {
+                        msg: "Welcome back!",
+                        type: "success"
+                    });
 
-        var stickynotes = $http.get('/api/stickynote');
-        stickynotes.then(function(result) {
-            console.log(result);
-        });
+                } else {
+                    $rootScope.$broadcast("alert:add", {
+                        msg: result.data.message,
+                        type: "danger"
+                    });
+                }
+
+            });
+
+        }
+
+  
+
     };
 
 };

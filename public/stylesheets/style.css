@@ -78,3 +78,11 @@ form .formBtn:active {
     border-color: #ccc;
     color: #fff;
 }
+
+.myAlert {
+    margin-top: 20px;
+    position: fixed;
+    text-align: center;
+    left:30%;
+    right: 30%;
+}
