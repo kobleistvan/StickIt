@@ -6,6 +6,10 @@
     "dependencies": {
 	    "unused-ignores": [
 	      "debug",
+	      "zone",
+	      "ejs"
+	    ],
+	    "ignores": [
 	      "rxjs"
 	    ]
     }
