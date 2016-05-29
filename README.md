@@ -10,6 +10,8 @@ My first probably AngularJS application with probably an overengineered backend 
 
 Run npm install && npm start
 
+http://stickit.kobleistvan.com
+
 Default user:
 Email: totalrandom@gmail.com
 Password: asdf1234
